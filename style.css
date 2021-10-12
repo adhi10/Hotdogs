@@ -1,0 +1,11 @@
+.row {
+    display: flex;
+    text-align: center;
+    font-size: larger;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .column{
+      flex: 50%;
+      padding: 5px;
+  }

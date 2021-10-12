@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Joe's Hotdogs</title>
+</head>
+
+<body>
+    <script language="javascript"> 
+        var pDog = 3.75;
+        var pFr = 2.00;
+        var pSo = 1.50;
+
+        var qDog = prompt("How many hotdogs do you want?", "0");
+        var qFr = prompt("How many fries do you want?", "0");
+        var qSo = prompt("How many sodas do you want?", "0");
+
+        var subTot = (pDog * parseInt(qDog)) + (pFr * parseInt(qFr)) + (pSo * parseInt(qSo));
+
+        disStr = "Discount Not Applied!";
+        discount = 0;
+        total = subTot;
+        if (subTot >= 20) {
+            discount = (.1 * subTot);
+            total = subTot - discount;
+            disStr = "Discount Applied!";
+        }
+        
+        tax = (.0625 * total);
+        total = total + tax;
+
+        tax = tax.toFixed(2);
+        discount = discount.toFixed(2);
+        subTot = subTot.toFixed(2);
+        total = total.toFixed(2);
+
+    </script>
+
+
+    <div class="row">
+        <div class="column" style="background-color:whitesmoke;">
+            <h1>Items and their quantities</h1>
+            <script language="javascript"> document.write(qDog)</script> Hotdogs <br>
+            <script language="javascript"> document.write(qFr)</script> Fries <br>
+            <script language="javascript"> document.write(qSo)</script> Sodas <br>
+        </div>
+        <div class="column" style="background-color:beige;">
+            <h1>Total and Tax Information</h1>
+            <script language="javascript"> document.write(disStr)</script> <br>
+            Discount: <script language="javascript"> document.write(discount)</script> <br>
+            Tax: <script language="javascript"> document.write(tax)</script> <br>
+            Subtotal: <script language="javascript"> document.write(subTot)</script> <br>
+            Total: <script language="javascript"> document.write(total)</script>
+        </div>
+    </div>
+    (All prices are in $)
+</body>
+
+</html>
